@@ -1,0 +1,103 @@
+{
+  "projectType": "saas",
+  "projectName": "Masca Dashboard",
+  "projectDescription": "A multi-vendor SaaS dashboard built with Vue 3 and Firebase that enables vendors to manage orders, sync products between Bsale POS and Shopify, process payments via MercadoPago, and coordinate deliveries through Uber Direct.",
+  "theme": "palm",
+  "primaryColor": "#43bb83",
+  "lightColor": "#3c8b74",
+  "darkColor": "#344d5c",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "getting-started/quickstart", "getting-started/configuration"]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/dashboard",
+              "features/orders",
+              "features/products",
+              "features/sent-orders"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/bsale",
+              "integrations/shopify",
+              "integrations/mercadopago",
+              "integrations/uber-direct"
+            ]
+          },
+          {
+            "group": "Authentication & Roles",
+            "pages": [
+              "auth/overview",
+              "auth/roles",
+              "auth/firebase-setup"
+            ]
+          },
+          {
+            "group": "Admin",
+            "pages": [
+              "admin/overview",
+              "admin/vendors",
+              "admin/products"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Backend API",
+            "pages": [
+              "api/overview",
+              "api/shopify",
+              "api/bsale",
+              "api/sync",
+              "api/payments",
+              "api/delivery"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-vendor role-based access (vendor and admin roles)",
+    "Real-time order management with status filtering",
+    "Product synchronization between Bsale POS and Shopify",
+    "MercadoPago payment processing integration",
+    "Uber Direct delivery quoting and tracking",
+    "Firebase Authentication with Google OAuth support",
+    "Bsale OAuth integration for POS token management",
+    "Cloud Functions backend (Express on Firebase Functions)"
+  ],
+  "publicApiSurface": [
+    "GET/POST /shopify/products",
+    "GET/POST /shopify/inventory",
+    "GET /shopify/orders",
+    "POST /shopify/auth",
+    "GET/POST /bsale/products",
+    "GET /bsale/sucursales",
+    "POST /bsale/oauth",
+    "GET /bsale/callback",
+    "POST /sync/products",
+    "POST /sync/desync",
+    "GET /sync/marketplace-products",
+    "POST /mp/pay",
+    "GET /mp/cart",
+    "POST /mp/confirm-order",
+    "POST /mp/webhook",
+    "POST /uber/quote",
+    "POST /uber/tracking-webhook",
+    "GET/PUT /orders",
+    "POST /checkout/cart"
+  ]
+}
